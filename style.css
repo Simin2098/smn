@@ -1,0 +1,295 @@
+form{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+border: 2px solid plum;
+width: fit-content;
+padding: 1rem;
+background-color: azure;
+margin-left: 50%;
+transform: translate(-50%);
+
+}
+
+.portfolio {
+border: 2px solid black;
+width: fit-content;
+justify-content: center;
+align-items: center;
+margin: 100px auto;
+padding: 20px;
+box-sizing: border-box;
+
+}
+
+#textArea {
+    border-color: black;
+    border-width: 2px;
+    color: slategray;
+    width: 500px;
+    height: 200px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 1rem;
+    position: relative;
+    
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.tab-container {
+    width: 500px;
+    border: 2px solid ;
+    box-shadow: 1px;
+    border-radius: 20px;
+}
+
+.tab-header {
+    display: flex;
+    padding: 0 10px;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color:lightsteelblue
+}
+
+.tab:last-child {
+    border-right: none;
+}
+
+.tab.active {
+    color:#000;
+    border-bottom: 2px solid black;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    min-height: 200px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.tab-content.active {
+    display: flex;
+
+}
+
+.task-1.container {
+display: grid;
+height: 100vh;
+grid-template-rows: auto 1fr auto;
+width: 50vh;
+}
+
+.item {
+    padding: 8px;
+    background-color: white;
+    border: 4px solid red;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.task-2.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 12px;
+}
+.task-2 .item-1 {
+    grid-column: 2 / span 4;
+    width: 50vh;
+}
+.task-2 .item-2 {
+    grid-column: 6 / span 6;
+}
+
+.height-50 {
+    height: 50vh;
+}
+
+.task-3-1.container {
+  display: grid;
+  height: 100vh;
+
+  grid-template-rows: auto auto 1fr auto auto auto;
+  gap: 24px;
+  width: 50vh;
+}
+
+@media (min-width: 720px) {
+  .task-3-1.container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+  }
+}
+.task-3-1 .header {
+  grid-column: 1 / span 12;
+}
+
+.task-3-1 .navigation {
+  grid-column: 1 / span 12;
+}
+
+.task-3-1 .main {
+  grid-column: 3 / span 10;
+}
+
+.task-3-1 .sidebar {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+}
+
+.task-3-1 .ads {
+  grid-column: 1 / span 2;
+}
+
+.task-3-1 .footer {
+  grid-column: 3 / span 10;
+}
+
+@media (min-width: 1020px) {
+
+  .task-3-1 .navigation {
+    grid-column: 3 / span 8;
+  }
+
+  .task-3-1 .main {
+    grid-column: 3 / span 8;
+  }
+
+  .task-3-1 .sidebar {
+    grid-row: 2 / 4
+  }
+
+  .task-3-1 .ads {
+    grid-column: 11 / span 2;
+    grid-row: 2 / 4;
+  }
+
+  .task-3-1 .footer {
+    grid-column: 1 / span 12;
+  }
+}
+
+.task-3-2 .header {
+  grid-area: header;
+}
+
+.task-3-2 .navigation {
+  grid-area: nav;
+}
+
+.task-3-2 .ads {
+  grid-area: ads;
+}
+
+.task-3-2 .sidebar {
+  grid-area: sidebar;
+}
+
+.task-3-2 .main {
+  grid-area: main;
+}
+
+.task-3-2 .footer {
+  grid-area: footer;
+}
+
+.task-3-2.container {
+  display: grid;
+  height: 100vh;
+
+  gap: 24px;
+
+  grid-template-rows: auto auto 1fr auto auto auto;
+
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "sidebar"
+    "ads"
+    "footer";
+}
+
+@media (min-width: 720px) {
+  .task-3-2.container {
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+      "header header header"
+      "nav nav nav "
+      "sidebar main main"
+      "ads footer footer";
+  }
+}
+
+@media (min-width: 1020px) {
+  .task-3-2.container {
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas:
+      "header header header header"
+      "sidebar nav nav ads"
+      "sidebar main main ads"
+      "footer footer footer footer";
+  }
+}
+
+.task-4.container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.task-4 .item-5 {
+  grid-column-end: span 2;
+  
+}
+
+task-5.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.task-5 .item-1 {
+  grid-row: 1/ span 3;
+  grid-column: 1/ span 3;
+}
+
+.task-5 .item-2 {
+  grid-row: 4/ span 3;
+  grid-column: 4/ span 3;
+}
+
+.task-5 .item-3 {
+  grid-row: 7/ span 3;
+  grid-column: 7/ span 3;
+}
+
+.task-5 .item-4 {
+  grid-row: 10/ span 3;
+  grid-column: 10/ span 3;
+}
